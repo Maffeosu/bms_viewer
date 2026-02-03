@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://3qlf2va1hnxn"]
+[gd_scene format=3 uid="uid://3qlf2va1hnxn"]
 
 [ext_resource type="Script" uid="uid://30dxv354u8w7" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="Texture2D" uid="uid://5oirnyia6tmw" path="res://assets/background.png" id="2_jyhfs"]
@@ -8,22 +8,22 @@
 default_font = ExtResource("3_tbgi4")
 default_font_size = 100
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" unique_id=1719106488]
 script = ExtResource("1_sugp2")
 
-[node name="ui" type="CanvasLayer" parent="."]
+[node name="ui" type="CanvasLayer" parent="." unique_id=609580055]
 layer = -1
 
-[node name="background" type="Sprite2D" parent="ui"]
+[node name="background" type="Sprite2D" parent="ui" unique_id=1846187180]
 position = Vector2(960, 540)
 texture = ExtResource("2_jyhfs")
 
-[node name="song_info" type="RichTextLabel" parent="ui"]
+[node name="song_info" type="RichTextLabel" parent="ui" unique_id=133413740]
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="prompt" type="RichTextLabel" parent="ui"]
+[node name="prompt" type="RichTextLabel" parent="ui" unique_id=1915973183]
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme = SubResource("Theme_tefeu")
@@ -31,50 +31,50 @@ text = "Drop your file here."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="dividers" type="Node2D" parent="ui"]
+[node name="dividers" type="Node2D" parent="ui" unique_id=231098680]
 visible = false
 
-[node name="lane_divider_right" type="ColorRect" parent="ui/dividers"]
-offset_right = 2.0
+[node name="lane_divider_right" type="ColorRect" parent="ui/dividers" unique_id=547014389]
+offset_right = 3.0
 offset_bottom = 1080.0
-color = Color(0.7373294, 0.735357, 0.735357, 1)
+color = Color(0.7372549, 0.7372549, 0.7372549, 1)
 
-[node name="lane_divider_left" type="ColorRect" parent="ui/dividers"]
-offset_right = 2.0
+[node name="lane_divider_left" type="ColorRect" parent="ui/dividers" unique_id=147498359]
+offset_right = 3.0
 offset_bottom = 1080.0
-color = Color(0.7373294, 0.735357, 0.735357, 1)
+color = Color(0.7372549, 0.7372549, 0.7372549, 1)
 
-[node name="lane_divider_1" type="ColorRect" parent="ui/dividers"]
-offset_right = 2.0
+[node name="lane_divider_1" type="ColorRect" parent="ui/dividers" unique_id=2048369827]
+offset_right = 3.0
 offset_bottom = 1080.0
-color = Color(0.7373294, 0.7373294, 0.7373294, 0.25)
+color = Color(0.7372549, 0.7372549, 0.7372549, 0.2509804)
 
-[node name="lane_divider_2" type="ColorRect" parent="ui/dividers"]
-offset_right = 2.0
-offset_bottom = 1080.0
-color = Color(0.7373294, 0.7373294, 0.7373294, 0.25)
-
-[node name="lane_divider_3" type="ColorRect" parent="ui/dividers"]
-offset_right = 2.0
+[node name="lane_divider_2" type="ColorRect" parent="ui/dividers" unique_id=338991919]
+offset_right = 3.0
 offset_bottom = 1080.0
 color = Color(0.7373294, 0.7373294, 0.7373294, 0.25)
 
-[node name="lane_divider_4" type="ColorRect" parent="ui/dividers"]
-offset_right = 2.0
+[node name="lane_divider_3" type="ColorRect" parent="ui/dividers" unique_id=1165553022]
+offset_right = 3.0
 offset_bottom = 1080.0
 color = Color(0.7373294, 0.7373294, 0.7373294, 0.25)
 
-[node name="lane_divider_5" type="ColorRect" parent="ui/dividers"]
-offset_right = 2.0
+[node name="lane_divider_4" type="ColorRect" parent="ui/dividers" unique_id=51934581]
+offset_right = 3.0
 offset_bottom = 1080.0
 color = Color(0.7373294, 0.7373294, 0.7373294, 0.25)
 
-[node name="lane_divider_6" type="ColorRect" parent="ui/dividers"]
-offset_right = 2.0
+[node name="lane_divider_5" type="ColorRect" parent="ui/dividers" unique_id=1320709463]
+offset_right = 3.0
 offset_bottom = 1080.0
 color = Color(0.7373294, 0.7373294, 0.7373294, 0.25)
 
-[node name="lane_divider_7" type="ColorRect" parent="ui/dividers"]
-offset_right = 2.0
+[node name="lane_divider_6" type="ColorRect" parent="ui/dividers" unique_id=995325226]
+offset_right = 3.0
+offset_bottom = 1080.0
+color = Color(0.7373294, 0.7373294, 0.7373294, 0.25)
+
+[node name="lane_divider_7" type="ColorRect" parent="ui/dividers" unique_id=1261671286]
+offset_right = 3.0
 offset_bottom = 1080.0
 color = Color(0.7373294, 0.7373294, 0.7373294, 0.25)

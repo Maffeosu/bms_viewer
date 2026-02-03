@@ -15,7 +15,7 @@ var lane6_notes: Array = []
 var lane7_notes: Array = []
 
 var lane_colors := [
-	Color(0.991, 0.479, 0.397),
+	Color(0.991, 0.479, 0.397, 1.0),
 	Color(1, 1, 1),
 	Color(0.451, 0.552, 0.956),
 	Color(1, 1, 1),
@@ -38,6 +38,7 @@ func _ready():
 	var start_x := (window_width - playfield_width) / 2
 
 	lane_positions.append(start_x - lane_spacing)
+
 	for i in range(main_lane_count):
 		lane_positions.append(start_x + i * lane_spacing)
 
@@ -133,8 +134,8 @@ func spawn_all_notes() -> void:
 
 			if lane_index == 0:
 				var x_pos_2 = lane_positions[0] - 16
-				note_instance.scale.x = 1.5
-				note_instance.position = Vector2(x_pos_2, y)
+				note_instance.scale.x = 1.525
+				note_instance.position = Vector2(x_pos_2 - 0.5, y)
 
 			add_child(note_instance)
 
@@ -151,8 +152,8 @@ func draw_measure_lines():
 
 		var line = ColorRect.new()
 		line.color = Color(0.5, 0.5, 0.5)
-		line.position = Vector2(playfield_left, y)
-		line.size = Vector2(playfield_width, 4)
+		line.position = Vector2(playfield_left + 3, y)
+		line.size = Vector2(playfield_width - 3, 4)
 		add_child(line)
 
 func _on_files_dropped(files: PackedStringArray) -> void:
