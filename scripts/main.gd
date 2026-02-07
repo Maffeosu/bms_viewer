@@ -56,7 +56,7 @@ func _input(event):
 func _process(_delta):
 	position.y = -scroll_offset
 	if $ui:
-		$ui/dividers/lane_divider_left.position.x = lane_positions[0] - 64
+		$ui/dividers/lane_divider_left.position.x = lane_positions[0] - 62
 		$ui/dividers/lane_divider_7.position.x = lane_positions[1] - 32
 		$ui/dividers/lane_divider_1.position.x = lane_positions[1] + 32
 		$ui/dividers/lane_divider_2.position.x = lane_positions[2] + 32
@@ -134,8 +134,8 @@ func spawn_all_notes() -> void:
 
 			if lane_index == 0:
 				var x_pos_2 = lane_positions[0] - 16
-				note_instance.scale.x = 1.525
-				note_instance.position = Vector2(x_pos_2 - 0.5, y)
+				note_instance.scale.x = 1.55
+				note_instance.position = Vector2(x_pos_2, y)
 
 			add_child(note_instance)
 
@@ -151,9 +151,9 @@ func draw_measure_lines():
 		var y = (total_measures - m) * measure_height
 
 		var line = ColorRect.new()
-		line.color = Color(0.5, 0.5, 0.5)
-		line.position = Vector2(playfield_left + 3, y)
-		line.size = Vector2(playfield_width - 3, 4)
+		line.color = Color(0.75, 0.75, 0.75)
+		line.position = Vector2(playfield_left + 2, y)
+		line.size = Vector2(playfield_width + 1, 4)
 		add_child(line)
 
 func _on_files_dropped(files: PackedStringArray) -> void:
